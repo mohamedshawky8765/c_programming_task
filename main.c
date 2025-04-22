@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 int main() {
-    int plane, passport_number, promocode,username,password,airline,airline_time;
+    int plane, passport_number, promocode,password,airline,airline_time;
     float main_price, price_after_discount;
-
+    char username[20];
+    
     printf("*******                    welcom :) \n");
     printf(" *      *\n");
     printf("  *      *\n");
@@ -21,8 +22,8 @@ int main() {
     printf("                                   *******\n");
 
     printf("Enter your Username:\n");
-    scanf("%d", &username);
-    if(username==2006)
+    scanf("%s", username);
+    if(username=="mohamed")
        {
        printf(" ");
        }
@@ -58,19 +59,19 @@ int main() {
     break;
         case 2:
          printf("Horus air lines\n");
-    printf("plane 1 luxor ==> newyork price 350$\n");
-    printf("plane 2  luxor ==> hong kong price 640$\n");
-    printf("plane 3  luxor ==> spain price 900$\n");
-    printf("plane 4 luxor ==> dubai price 780$\n");
-    printf("plane 5  luxor ==> canada price 520$\n\n");
+    printf("plane 6 luxor ==> newyork price 350$\n");
+    printf("plane 7  luxor ==> hong kong price 640$\n");
+    printf("plane 8  luxor ==> spain price 900$\n");
+    printf("plane 9 luxor ==> dubai price 780$\n");
+    printf("plane 10  luxor ==> canada price 520$\n\n");
     break;
          case 3:
            printf("Alex air lines\n");
-    printf("plane  1 alex ==> newyork price 350$\n");
-    printf("plane  2  alex ==> hong kong price 640$\n");
-    printf("plane  3  alex ==> spain price 900$\n");
-    printf("plane  4  alex ==> dubai price 780$\n");
-    printf("plane  5  alex ==> canada price 520$\n\n\n");
+    printf("plane  11 alex ==> newyork price 350$\n");
+    printf("plane  12  alex ==> hong kong price 640$\n");
+    printf("plane  13  alex ==> spain price 900$\n");
+    printf("plane  14  alex ==> dubai price 780$\n");
+    printf("plane  15  alex ==> canada price 520$\n\n\n");
     break;
     }
 
@@ -97,6 +98,36 @@ int main() {
      case 5:
         main_price=520;
         break;
+      case 6:
+      main_price=350;
+      break;
+     case 7:
+        main_price=640;
+      break;
+     case 8:
+        main_price=900;
+        break;
+     case 9:
+        main_price=780;
+        break;
+     case 10:
+        main_price=520;
+        break;
+     case 11:
+      main_price=350;
+      break;
+     case 12:
+        main_price=640;
+      break;
+     case 13:
+        main_price=900;
+        break;
+     case 14:
+        main_price=780;
+        break;
+     case 15:
+        main_price=520;
+        break;
      }
 
     printf("Enter promocode (press 0 if you don't have one):\n");
@@ -104,22 +135,20 @@ int main() {
 
     switch(promocode) {
         case 0:
-            printf("You don't have a promocode. The price is %f $\n", main_price);
+            printf("You don't have a promocode. The price is %f\n", main_price);
             break;
         case 40:
             price_after_discount = main_price - (main_price * .4);
-            printf("Promocode applied. The discounted price is %f $\n", price_after_discount);
+            printf("Promocode applied. The discounted price is %f\n", price_after_discount);
             break;
         case 60:
             price_after_discount = main_price - (main_price * .6);
-            printf("Promocode applied. The discounted price is %f $\n", price_after_discount);
+            printf("Promocode applied. The discounted price is %f\n", price_after_discount);
             break;
         default:
-            printf("Invalid promocode. The price remains %f $\n", main_price);
+            printf("Invalid promocode. The price remains %f\n", main_price);
     }
     printf("your ticket has booked");
     end:
     return 0;
 }
-
-
