@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 int main() {
     int plane, passport_number, promocode,password,airline,login_sing_up,degree;
     float main_price, price_after_discount;
     char username[20];
     void log_in(char,int,int);
      void sign_up(char,int,int);
+
 
 
     printf("*******                    welcom :) \n");
@@ -28,14 +28,36 @@ int main() {
     scanf("%d",&login_sing_up);
     switch(login_sing_up)
     {
-    /*case 1 :
-        log_in(username,password,passport_number);
-        break;*/
     case 1 :
         sign_up(username,password,passport_number);
         break;
+    case 2 :
+              printf("Enter your Username:\n");
+    scanf("%s", username);
+    if(username=="mohamed")
+       {
+       printf(" ");
+       }
+    else
+    {
+       printf("user name is not correct ...");
+     goto end;
     }
-
+    printf("Enter your password:\n");
+    scanf("%d", &password);
+    if(password==2006)
+       {
+       printf(" ");
+       }
+    else
+    {
+    printf("password is not correct ...");
+     goto end;
+    }
+    printf("Enter your passport number:\n");
+    scanf("%d", &passport_number);
+        break;
+    }
     printf("select an air line \n Egypt air lines ==> 1 \n Horus air lines ==> 2 \n Alex air lines ==> 3\n");
     scanf("%d",&airline);
     switch(airline)
@@ -150,41 +172,15 @@ int main() {
 void sign_up(char username,int password,int passport_number)
 {
     printf("Enter your Username:\n");
-    scanf("%s", username);
+    scanf("%s",&username);
 
     printf("Enter your password:\n");
-    scanf("%d", &password);
+    scanf("%d",&password);
 
 
     printf("Enter your passport number:\n");
-    scanf("%d", &passport_number);
+    scanf("%d",&passport_number);
 
 }
-/*void log_in(char username,int password,int passport_number)
-{
-      printf("Enter your Username:\n");
-    scanf("%s", username);
-    if(username=="mohamed")
-       {
-       printf(" ");
-       }
-    else
-    {
-       printf("user name is not correct ...");
-     goto end;
-    }
-    printf("Enter your password:\n");
-    scanf("%d", &password);
-    if(password==2006)
-       {
-       printf(" ");
-       }
-    else
-    {
-    printf("password is not correct ...");
-     goto end;
-    }
-    printf("Enter your passport number:\n");
-    scanf("%d", &passport_number);
-}*/
+
 
